@@ -1,1 +1,65 @@
 /* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
+
+h1
+{
+    color: black;
+    font-size: 20px;
+    /*text-align: center;*/
+}
+
+body
+{
+    background-color: white;
+    /*text-align: center;*/
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header
+{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+header > ul, header > ul > *
+{
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+footer
+{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    position:fixed;
+    bottom: 0px;
+}
+
+.contact-button
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    padding: 10px;
+    /*margin: 10px 10px;*/
+}
+
+header p
+{
+    margin: 10px 0px;
+}
+
+article p
+{
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    line-height: 20px;
+    text-indent: 30px;
+}
