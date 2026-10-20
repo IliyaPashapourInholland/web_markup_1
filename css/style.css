@@ -10,42 +10,50 @@ h1
 body
 {
     background-color: white;
-    /*text-align: center;*/
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    min-height: 100vh;
+    max-height: 100vh;
+    gap: 24px;
+    margin: 0 12px;
 }
 
 header
 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: black;
     color: white;
     font-size: 20px;
 }
 
-header > ul, header > ul > *
+header > ul
 {
-    display: inline-block;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
     margin: 0px 20px;
 }
 
 footer
 {
+    display: flex;
     padding: 10px;
     background-color: black;
     color: white;
     font-size: 20px;
-    position:fixed;
     bottom: 0px;
 }
 
 .contact-button
 {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    /*right: 10px;
+    top: 10px;*/
     background-color: white;
     padding: 10px;
     /*margin: 10px 10px;*/
@@ -60,6 +68,88 @@ article p
 {
     letter-spacing: 0px;
     word-spacing: 2px;
-    line-height: 20px;
+    line-height: 22px;
     text-indent: 30px;
+    font-size: 18px;
+}
+
+#contact-form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.art-image
+{
+    grid-column: 1 / 10;
+    object-fit: fill;
+    width: 100%;
+    height: 100vh;
+}
+
+.explanation
+{
+    grid-column: 1 / 4;
+    /*grid-row: 1 / 6;*/
+}
+
+.explanation-card
+{
+    grid-column: 10 / 13;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    gap: 24px;
+    margin: 12px 0;
+    padding: 0;
+}
+
+.info-button
+{
+    grid-column: 1/2;
+}
+
+.prev-button
+{
+    grid-column: 2/3;
+}
+
+.next-button
+{
+    grid-column: 3/4;
+}
+
+
+.info-button, .prev-button, .next-button
+{
+    /*grid-row: 6 / 7;*/
+    height: 24px;
+    align-self: end;
+}
+
+.card-button
+{
+    background-color: #384C73;
+    color: #ffffff;
+    height: 40px;
+    font-style: bold;
+    font-size: 16px;
+}
+
+.credits
+{
+    position:fixed;
+    left: 12px;
+    bottom: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.credits p
+{
+    background-color: #ffffffc2;
+    width: fit-content;
+    text-indent: 0px;
+    margin: 0;
+    font-size: 20px;
 }
