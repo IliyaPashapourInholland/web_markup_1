@@ -1,8 +1,20 @@
 /* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
 
+/*Hello*/
+:root
+{
+    --color1: #384b72;
+    --color2: #993323;
+}
+
 @font-face {
     font-family: roboto;
     src: url(../font/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(../font/BebasNeue-Regular.ttf);
 }
 
 h1
@@ -21,6 +33,11 @@ body
 {
     background-color: white;
     font-family: roboto;
+    margin: 0;
+}
+
+main
+{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 24px;
@@ -33,17 +50,32 @@ body
     max-height: 100vh;
 }
 
-header
+nav
 {
-    display: fixed;
+    display: flex;
     justify-content: center;
     align-content: center;
     justify-content: space-between;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    font-size: 20px;
 }
+
+.nav-button
+{
+    font-family: bebas;
+    font-size: 32px;
+}
+
+header
+{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    font-size: 20px;
+    padding: 2px 12px;
+}
+
 
 header > ul
 {
@@ -72,6 +104,49 @@ footer
     padding: 10px;
     /*margin: 10px 10px;*/
 }
+
+h1
+{
+    font-family: bebas;
+    font-size: 32px;
+    font-weight: normal;
+    grid-column: 1 / 13;
+    text-align: center;
+}
+
+.big-button
+{
+    font-family: bebas;
+    font-size: 32px;
+    font-weight: normal;
+    color: white;
+    border-color: black;
+    border-width: 6px;
+    border-style: solid;
+    aspect-ratio: 1/1;
+}
+
+
+#big-map-button
+{
+    grid-column-start: 5;
+}
+/*
+#big-map-button
+{
+    grid-column: 5 / 7;
+}
+
+#big-map-button
+{
+    grid-column: 7 / 9;
+}
+
+#big-map-button
+{
+    grid-column: 9 / 11;
+}
+*/
 
 header p
 {
