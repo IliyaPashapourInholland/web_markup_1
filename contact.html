@@ -7,18 +7,31 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
+    <main>
+    <h1>Contact</h1>
     <form action="http://next-app-router-playground-kohl.vercel.app/api/contact" method="POST" id="contact-form">
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name" placeholder="John Smith" required>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="John Aaron Smith" required>
 
-        <label for="email">Email: </label>
+        <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="john.smith@example.com" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="0031-6-412-28312" required>
 
-        <label for="message">Message: </label>
+        <label for="message">Message</label>
         <!--<input type="text" id="message" name="message" placeholder="Your message" required> -->
         <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        
+        <p class="contact-bottom-text">
+            This information will only be used for contacting you.
+        </p>
+        <p class="contact-bottom-text">
+            Expect to get a response within two weeks.
+        </p>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="submit-button">
     </form>
+    </main>
 </body>
 </html>

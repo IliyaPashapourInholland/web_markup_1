@@ -162,11 +162,13 @@ p
     margin: 0;
 }
 
+/*
 #contact-form
 {
     display: flex;
     flex-direction: column;
 }
+*/
 
 .art-image
 {
@@ -213,12 +215,13 @@ p
     align-self: end;
 }
 
-.card-button
+.card-button, .submit-button
 {
-    background-color: #384C73;
+    background-color: var(--color1);/*#384C73;*/
     color: #ffffff;
     height: 40px;
     font-size: 16px;
+    font-family: roboto
 }
 
 .credits
@@ -240,11 +243,6 @@ p
     padding: 2px 8px;
 }
 
-button
-{
-    font-family: roboto;
-}
-
 .history-festivals-article
 {
     background-color: var(--color1);
@@ -252,8 +250,9 @@ button
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 24px;
+    gap: 0 24px;
     padding: 12px 0;
+    align-items: start;
 }
 
 .history-festivals-article p
@@ -269,7 +268,63 @@ button
     grid-column: 3 / 11;
     margin: 0;
     background-color: var(--color1);
-    padding: 12px 12px;
+    padding: 36px 12px;
+}
+
+form
+{
+    grid-column: 5 / 9;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 24px;
+}
+
+label
+{
+    grid-column: 1 / 5;
+    font-family: roboto;
+    font-style: normal;
+    font-size: 20px;
+}
+
+input, textarea
+{
+    font-family: roboto;
+    font-size: 20px;
+    grid-column: 1 / 5;
+    margin-bottom: 24px;
+    background-color: #aed9ff;
+    outline: none;
+    width: 100%;
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder
+{
+    font-style: italic;
+}
+
+input
+{
+    height: 32px;
+}
+
+textarea
+{
+    height: 100px;
+}
+
+.submit-button
+{
+    grid-column: 2 / 4;
+    margin-top: 24px;
+}
+
+.contact-bottom-text
+{
+    font-style: italic;
+    grid-column: 1 / 5;
+    text-indent: 0;
 }
 
 @media (max-width: 440px) {
@@ -313,7 +368,6 @@ button
         font-size: 40px;
         font-weight: normal;
         grid-column: 1 / 5;
-        text-align: center;
     }
 
     .history-festivals-article
@@ -326,6 +380,8 @@ button
     .history-festivals-h1
     {
         grid-column: 1 / 5;
+        padding: 12px 12px;
+        text-align: left;
     }
 
     .history-festivals-article p
@@ -333,6 +389,11 @@ button
         color: black;
         grid-column: 1 / 5;
         margin: 0 12px;
+    }
+
+    form
+    {
+        grid-column: 1 / 5;
     }
 }
 
@@ -399,5 +460,10 @@ button
     {
         color: white;
         grid-column: 2 / 6;
+    }
+
+    form
+    {
+        grid-column: 3 / 7;
     }
 }
