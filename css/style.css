@@ -43,7 +43,7 @@ main
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 24px;
+    gap: 0 24px;
     margin: 0 12px;
 }
 
@@ -155,10 +155,11 @@ h1
 p
 {
     letter-spacing: 0px;
-    word-spacing: 2px;
+    word-spacing: 3px;
     line-height: 22px;
-    text-indent: 30px;
+    text-indent: 20px;
     font-size: 20px;
+    margin: 0;
 }
 
 #contact-form
@@ -248,27 +249,33 @@ button
 {
     background-color: var(--color1);
     grid-column: 3 / 11;
-    height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 12px 0;
 }
 
 .history-festivals-article p
 {
     color: white;
-    margin: 24px 144px;
+    /*margin: 24px 144px;*/
+    grid-column: 2 / 8;
 }
 
-.history-festivals-article > h1
+.history-festivals-h1
 {
     color: white;
+    grid-column: 3 / 11;
+    margin: 0;
+    background-color: var(--color1);
+    padding: 12px 12px;
 }
 
 @media (max-width: 440px) {
     main
     {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 24px;
-        margin: 0 12px;
     }
 
     .logo
@@ -311,25 +318,28 @@ button
 
     .history-festivals-article
     {
-        background-color: var(--color1);
+        background-color: white;
         grid-column: 1 / 5;
-        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .history-festivals-h1
+    {
+        grid-column: 1 / 5;
     }
 
     .history-festivals-article p
     {
-        color: white;
-        margin: 24px 12px;
+        color: black;
+        grid-column: 1 / 5;
+        margin: 0 12px;
     }
 }
 
 @media (min-width: 440px) and (max-width: 740px) {
     main
     {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 24px;
-        margin: 0 12px;
     }
 
     .logo
@@ -374,12 +384,20 @@ button
     {
         background-color: var(--color1);
         grid-column: 2 / 8;
-        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .history-festivals-h1
+    {
+        color: white;
+        grid-column: 1 / 7;
+        grid-column: 2 / 8;
     }
 
     .history-festivals-article p
     {
         color: white;
-        margin: 24px 24px;
+        grid-column: 2 / 6;
     }
 }
