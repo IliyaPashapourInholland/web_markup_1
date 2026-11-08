@@ -27,7 +27,7 @@
     padding-top: 2vh;
 }
 
-html
+.gallery
 {
     overflow: hidden;
 }
@@ -84,6 +84,7 @@ header
     border-width: 0px 0px 5px 0px;
     font-size: 20px;
     padding: 2px 12px;
+    position: sticky;
 }
 
 
