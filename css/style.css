@@ -74,6 +74,16 @@ nav
     text-decoration: underline;
 }
 
+.nav-button:focus
+{
+    text-decoration: underline;
+}
+
+.nav-button:active
+{
+    color: var(--color2);
+}
+
 header
 {
     padding: 10px;
@@ -87,18 +97,9 @@ header
     position: sticky;
 }
 
-
-header > ul
-{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    margin: 0px 20px;
-}
-
 footer
 {
+    color: black;
 }
 
 h1
@@ -222,7 +223,9 @@ p
     color: #ffffff;
     height: 40px;
     font-size: 16px;
-    font-family: roboto
+    font-family: roboto;
+    text-align: center;
+    line-height: 40px;
 }
 
 .credits
@@ -242,6 +245,9 @@ p
     margin: 0;
     font-size: 20px;
     padding: 2px 8px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: var(--color2);
 }
 
 .history-festivals-article
@@ -323,9 +329,34 @@ textarea
 
 .contact-bottom-text
 {
-    font-style: italic;
+    /*font-style: italic;*/
     grid-column: 1 / 5;
     text-indent: 0;
+}
+
+.map
+{
+    grid-column: 1 / 7;
+    object-fit: contain;
+    justify-self: left;
+    width: 50vw;
+    margin-top: 24px;
+}
+
+ul
+{
+    display: flex;
+    flex-direction: column;
+    grid-column: 7 / 13;
+    gap: 12px;
+    list-style-type: decimal;
+}
+
+ul li::marker
+{
+    font-family: bebas;
+    font-size: 40px;
+    color: var(--color2);
 }
 
 @media (max-width: 440px) {
