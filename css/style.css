@@ -24,6 +24,7 @@
     max-width: 60vw;
     object-fit: contain;
     justify-self: center;
+    padding-top: 2vh;
 }
 
 html
@@ -60,11 +61,17 @@ nav
     justify-content: space-between;
 }
 
-nav a
+.nav-button
 {
     font-family: bebas;
     font-size: 3vw;
     color: var(--color1);
+    text-decoration: none;
+}
+
+.nav-button:hover
+{
+    text-decoration: underline;
 }
 
 header
@@ -91,42 +98,37 @@ header > ul
 
 footer
 {
-    display: flex;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    bottom: 0px;
-}
-
-.contact-button
-{
-    /*right: 10px;
-    top: 10px;*/
-    background-color: white;
-    padding: 10px;
-    /*margin: 10px 10px;*/
 }
 
 h1
 {
     font-family: bebas;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: normal;
     grid-column: 1 / 13;
     text-align: center;
+    margin: 24px;
 }
 
 .big-button
 {
     font-family: bebas;
-    font-size: 3vw;
+    font-size: 2em;
     font-weight: normal;
-    color: white;
+    color: black;
     border-color: var(--color1);
     border-width: 6px;
     border-style: solid;
     aspect-ratio: 1/1;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.big-button:hover
+{
+    text-decoration: underline;
 }
 
 
@@ -150,19 +152,13 @@ h1
     grid-column: 9 / 11;
 }
 
-
-header p
-{
-    margin: 10px 0px;
-}
-
-article p
+p
 {
     letter-spacing: 0px;
     word-spacing: 2px;
     line-height: 22px;
     text-indent: 30px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #contact-form
@@ -248,6 +244,24 @@ button
     font-family: roboto;
 }
 
+.history-festivals-article
+{
+    background-color: var(--color1);
+    grid-column: 3 / 11;
+    height: 100vh;
+}
+
+.history-festivals-article p
+{
+    color: white;
+    margin: 24px 144px;
+}
+
+.history-festivals-article > h1
+{
+    color: white;
+}
+
 @media (max-width: 440px) {
     main
     {
@@ -293,6 +307,19 @@ button
         font-weight: normal;
         grid-column: 1 / 5;
         text-align: center;
+    }
+
+    .history-festivals-article
+    {
+        background-color: var(--color1);
+        grid-column: 1 / 5;
+        height: 100vh;
+    }
+
+    .history-festivals-article p
+    {
+        color: white;
+        margin: 24px 12px;
     }
 }
 
@@ -341,5 +368,18 @@ button
         font-weight: normal;
         grid-column: 2 / 8;
         text-align: center;
+    }
+
+    .history-festivals-article
+    {
+        background-color: var(--color1);
+        grid-column: 2 / 8;
+        height: 100vh;
+    }
+
+    .history-festivals-article p
+    {
+        color: white;
+        margin: 24px 24px;
     }
 }
